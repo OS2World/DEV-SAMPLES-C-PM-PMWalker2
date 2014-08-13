@@ -1,0 +1,11 @@
+; WALKER defintion file
+
+NAME            WALKER  WINDOWAPI
+
+DESCRIPTION     'Walker utility (C) Lee S. Fields, 1989'
+PROTMODE
+HEAPSIZE        1024
+STACKSIZE       8192
+EXPORTS         _ClientWndProc
+
+

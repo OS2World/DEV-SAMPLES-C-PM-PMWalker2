@@ -1,0 +1,8 @@
+#include <os2.h>
+#include "walker.h"
+
+POINTER IDP_STEP1 step1.ico
+POINTER IDP_STEP2 step2.ico
+POINTER IDP_STEP3 step3.ico
+POINTER IDP_STEP4 step2.ico
+
