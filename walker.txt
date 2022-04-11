@@ -1,0 +1,90 @@
+Name: 		PMWALKER2
+Descripcion: 	One way to get an animated icon
+Date: 		2022-04-10
+Version:	4.1
+----------------------------   
+
+DESCRIPTION
+-----------
+This is a PM sample application that will run a little animation on the top-left icon of the PM window. 
+
+
+REQUIREMENTS
+------------
+- yum install gcc libc-devel binutils kbuild-make
+
+COMPILE INSTRUCTIONS
+--------------------
+This version of this sample was modified to compile on ArcaOS with GCC 9 compiler. 
+1) Remember to have correct OS/2 toolkit header files your path. For GCC the correct ones are the included on the "libc-devel", not the ones from the OS/2 Toolkit.
+2) Run "nmake" or "nmake 2>&1 |tee make.out" to get the log file.
+
+
+TOOLS USED
+----------
+- ArcaOS	- Verion 5.0.6
+- RC 		- Version 4.00.011 Oct 10 2000
+- gcc		- gcc (GCC) 9.2.0 20190812 (OS/2 RPM build 9.2.0-5.oc00)
+
+- nmake		- Version 4.00.001 Oct  4 2001
+or
+- make 		- Version 3.81 k2 (2017-11-10)
+
+TROUBLESHOOT
+------------
+The compile produce will run by just executing "nmake" (or "make") on the directory. If you want to save the log file you can run it as "nmake 2>&1 |tee make.out". The log will be saved into the "make.out" file.
+
+HISTORY
+---------- 
+- r4.1 - 2022-04-10
+Removed C code warning that was showing with gcc -Wall parameter. 
+
+- r4 - 2022-04-01
+Reduced DEF file and added release version for bldlevel.
+Improved makefile to support nmake and GNU make.
+   
+- r3 - 2022-03-30
+Modified version for GCC 9, ArcaOS 5.0.6 by Dave Yeo.
+Updated to compile with newer GCC's like installed with RPM and using kLIBC or libcn.
+Added clean target, nmake clean
+
+- r2
+Modified version for OS/2 2.0 and gcc by David Charlap.
+
+changes were made from the original sources (Lee S. Fields, 1989) in November, 1992 to get walker to run under OS/2 2.0 and compile with GCC/2:
+
+The Msg parameter of ClientWndProc changed from USHORT to ULONG Prototype for ClientWndProc moved to walker.h, where it belongs.
+Instances of NULL changed to NULLHANDLE where necessary.  This should have been done under OS/2 1.3, since NULL is a pointer and NULLHANDLE is an integer.
+
+More frame creation flags added to get the window to appear.
+WinSetWindowPosition() call added to make window visible and active
+WM_PAINT handler added so the window fills in white instead of being
+    left not drawn
+walker.def modified - export changed to _ClientWndProc, since GCC/2
+    prepends an underscore to EXPENTRY code, contrary to IBM convention.
+Icons updated to OS/2 2.0 format, 16x16 icons added so the walking man in
+    the system menu box looks OK.
+A make file was written.
+
+Changed to a 32-bit app which will only run under OS/2 2.0.
+Compiled with GCC/2, but it should easilly compile with C Set/2 or EMX/GCC with a minor change to the .DEF file.
+
+With minor changes, it should compile fine under OS/2 1.x as well.
+These changes include converting the icons (*.ICO) from 2.0 format to
+1.2 format, and changing the Msg parameter to ClientWndProc from a
+ULONG to a USHORT.
+
+
+- r1 
+Original version by Lee S. Fields
+
+LICENSE
+-------
+The 3-Clause BSD License.
+
+AUTHORS
+-------
+- Martin Iturbide
+- Dave Yeo - dave.r.yeo@gmail.com (2021)
+- David Charlap - dic5340@hertz.njit.edu (1992)
+- Lee S. Fields (1989)

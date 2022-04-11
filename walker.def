@@ -1,11 +1,6 @@
 ; WALKER defintion file
 
-NAME            WALKER  WINDOWAPI
+NAME            WALKER WINDOWAPI
 
-DESCRIPTION     'Walker utility (C) Lee S. Fields, 1989'
-PROTMODE
-HEAPSIZE        1024
-STACKSIZE       8192
-EXPORTS         _ClientWndProc
-
+DESCRIPTION     '@#OS2World:4.01#@##1## 10 Apr 2022 20:37:00     ARCAOS-444::::::v4.01@@Moving icon test program'
 

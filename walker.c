@@ -1,6 +1,12 @@
-/* WALKER.C - Sample Animated Icon Program   */
-/* Copyright (C) Lee S. Fields, 1989         */
-
+//==========================================
+// walker.c : Sample Animated Icon Program
+// Version r4
+// License: 3-Clause BSD License
+// Authors:
+// - Dave Yeo, 2022
+// - David Charlap, 1992
+// - Lee S. Fields, 1989
+//==========================================
 /*
  * The following changes were made from the original sources by David Charlap
  * in November, 1992 to get walker to run under OS/2 2.0 and compile with
@@ -38,10 +44,10 @@ HMQ hmq;
 HWND hwndClient, hwndFrame;
 QMSG qmsg;
 
-CHAR szCaption[80] = "Walker";
+static unsigned char szCaption[80] = "Walker";
 
 int main (int argc, char *argv[]) {
-  static CHAR szClientClass[] = "Walker";
+  unsigned char szClientClass[] = "Walker";
 
   ULONG flFrameFlags = FCF_ICON | FCF_SYSMENU | FCF_SIZEBORDER | FCF_MINMAX |
                        FCF_TITLEBAR | FCF_TASKLIST | FCF_SHELLPOSITION;
@@ -57,10 +63,10 @@ int main (int argc, char *argv[]) {
 				  IDP_STEP1, &hwndClient);
   WinSetWindowPos (hwndFrame, HWND_TOP, 0L, 0L, 0L, 0L,
 		   SWP_SHOW | SWP_ZORDER | SWP_ACTIVATE );
-  
+
   while (WinGetMsg (hab, &qmsg, NULLHANDLE, 0, 0))
     WinDispatchMsg (hab, &qmsg);
-  
+
   WinDestroyWindow (hwndFrame);
   WinDestroyMsgQueue (hmq);
   WinTerminate (hab);
@@ -77,7 +83,7 @@ MRESULT EXPENTRY ClientWndProc (HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
     for (counter = IDP_STEP1; counter <= IDP_STEP4; counter++)
       step[counter] = WinLoadPointer (HWND_DESKTOP, NULLHANDLE, counter);
     if (!WinStartTimer (hab, hwnd, ID_TIMER, 333)) {
-      WinMessageBox (HWND_DESKTOP, hwnd, "Too many timers",
+      WinMessageBox (HWND_DESKTOP, hwnd, (PSZ)"Too many timers",
 		     szCaption, 0, MB_OK | MB_ICONEXCLAMATION);
       WinPostMsg (hwnd, WM_QUIT, 0L, 0L);
     }
