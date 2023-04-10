@@ -10,7 +10,7 @@ LICENSE
 COMPILE TOOLS
 ===============
 * GCC, Make, OS2 Tooklit
-* yum install gcc git make os2tk45
+* yum install gcc git make libc-devel
  
 AUTHORS
 ===============
