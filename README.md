@@ -9,7 +9,8 @@ LICENSE
 
 COMPILE TOOLS
 ===============
-* GCC
+* GCC, Make, OS2 Tooklit
+* yum install gcc git make os2tk45
  
 AUTHORS
 ===============
