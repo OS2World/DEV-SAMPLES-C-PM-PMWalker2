@@ -9,8 +9,8 @@ LICENSE
 
 COMPILE TOOLS
 ===============
-* GCC, Make, OS2 Tooklit
-* yum install gcc git make libc-devel
+* GCC, Make, OS2 Tooklit, BinUtils
+* yum install gcc git make libc-devel binutils
  
 AUTHORS
 ===============
