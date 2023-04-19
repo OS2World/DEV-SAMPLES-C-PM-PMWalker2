@@ -5,7 +5,7 @@ PMWalker2 - How to make an animated icon
 
 LICENSE
 ===============
-* Not Specified
+* 3-Clause BSD License
 
 COMPILE TOOLS
 ===============
