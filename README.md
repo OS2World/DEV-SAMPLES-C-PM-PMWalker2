@@ -1,5 +1,7 @@
 # DEV-SAMPLE-PM-PMWalker2
-PMWalker2 - How to make an animated icon 
+PMWalker2 - How to make an animated icon
+
+![PMwalker2 ScreenShot](/wiki/PMWalker2_001.png)
 
 LICENSE
 ===============
