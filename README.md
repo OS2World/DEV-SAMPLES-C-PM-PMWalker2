@@ -1,5 +1,5 @@
 # DEV-SAMPLE-PM-PMWalker2
-PMWalker2 - How to make an animated icon
+PMWalker2 - A C sample on how to make an animated icon on the top left window icon.
 
 ![PMwalker2 ScreenShot](/wiki/PMWalker2_001.png)
 
